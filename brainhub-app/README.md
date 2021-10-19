@@ -2,7 +2,7 @@
 Recruitment task react
 
 # Requirements
-All what you need is installed **node**, **npm** and running local **mongoDB**.
+All you need is installed **node**, **npm** and running local **mongoDB**.
 
 # Installation
 Clone repository and simply run "**npm install**" command.
