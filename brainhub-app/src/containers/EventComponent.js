@@ -1,10 +1,12 @@
+/* eslint-disable react/jsx-filename-extension */
+/* eslint-disable react/react-in-jsx-scope */
 import { Segment, Grid } from "semantic-ui-react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { eventSchema, createEvent } from "./Event";
 
 const EventComponent = () => (
   <div>
-    <h1>Create event</h1>
+    <h3>Create event</h3>
     <Formik
       initialValues={{
         firstName: "",

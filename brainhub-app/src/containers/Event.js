@@ -8,6 +8,11 @@ export const createEvent = (eventValues) => {
     .then((response) => alert(JSON.stringify(response.data)));
 };
 
+export const getAllEvents = () => {
+  return axios.get(EVENTS_URL);
+  // .then((response) => alert(JSON.stringify(response.data)));
+};
+
 export const eventSchema = Yup.object().shape({
   firstName: Yup.string().required(),
   lastName: Yup.string().required(),
