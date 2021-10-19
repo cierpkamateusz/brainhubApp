@@ -23,8 +23,8 @@ const EventListComponent = ({ events }) => {
     <Table celled striped>
       <Table.Header>
         <Table.Row>
-          <Table.HeaderCell>lastName</Table.HeaderCell>
           <Table.HeaderCell>firstName</Table.HeaderCell>
+          <Table.HeaderCell>lastName</Table.HeaderCell>
           <Table.HeaderCell>email</Table.HeaderCell>
           <Table.HeaderCell>date</Table.HeaderCell>
         </Table.Row>
