@@ -13,7 +13,7 @@ const EventComponent = ({ onSubmit }) => (
         firstName: "",
         lastName: "",
         email: "",
-        date: new Date(),
+        date: "",
       }}
       validationSchema={eventSchema}
       onSubmit={(values, { setSubmitting }) => {
@@ -27,27 +27,31 @@ const EventComponent = ({ onSubmit }) => (
           <Segment raised>
             <Grid>
               <Grid.Row>
-                <Field type="text" name="firstName" />
+                <Field type="text" name="firstName" data-testid="firstName" />
                 <ErrorMessage name="firstName" />
               </Grid.Row>
 
               <Grid.Row>
-                <Field type="text" name="lastName" />
+                <Field type="text" name="lastName" data-testid="lastName" />
                 <ErrorMessage name="lastName" />
               </Grid.Row>
 
               <Grid.Row>
-                <Field type="email" name="email" />
+                <Field type="email" name="email" data-testid="email" />
                 <ErrorMessage name="email" />
               </Grid.Row>
 
               <Grid.Row>
-                <Field type="date" name="date" />
+                <Field type="date" name="date" data-testid="date" />
                 <ErrorMessage name="date" />
               </Grid.Row>
 
               <Grid.Row>
-                <button type="submit" disabled={isSubmitting}>
+                <button
+                  type="submit"
+                  data-testid="submitButton"
+                  disabled={isSubmitting}
+                >
                   Submit
                 </button>
               </Grid.Row>
