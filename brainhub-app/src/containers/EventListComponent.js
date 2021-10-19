@@ -1,13 +1,15 @@
+/* eslint-disable react/no-array-index-key */
+/* eslint-disable react/jsx-filename-extension */
+/* eslint-disable react/react-in-jsx-scope */
 /* eslint-disable react/prop-types */
 import { Table } from "semantic-ui-react";
 
 const EventListComponent = ({ events }) => {
   const returnTableBody = (data) => {
-    console.log(events);
-    return data.map((singleEvent) => {
+    return data.map((singleEvent, index) => {
       const { firstName, lastName, email, date } = singleEvent;
       return (
-        <Table.Row>
+        <Table.Row key={index}>
           <Table.Cell>{firstName}</Table.Cell>
           <Table.Cell>{lastName}</Table.Cell>
           <Table.Cell>{email}</Table.Cell>

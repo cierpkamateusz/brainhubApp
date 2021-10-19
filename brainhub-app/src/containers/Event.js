@@ -3,14 +3,11 @@ import axios from "axios";
 import EVENTS_URL from "../routesBE";
 
 export const createEvent = (eventValues) => {
-  return axios
-    .post(EVENTS_URL, eventValues)
-    .then((response) => alert(JSON.stringify(response.data)));
+  return axios.post(EVENTS_URL, eventValues);
 };
 
 export const getAllEvents = () => {
   return axios.get(EVENTS_URL);
-  // .then((response) => alert(JSON.stringify(response.data)));
 };
 
 export const eventSchema = Yup.object().shape({

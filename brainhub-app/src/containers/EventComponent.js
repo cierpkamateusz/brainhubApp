@@ -1,10 +1,11 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable react/jsx-filename-extension */
 /* eslint-disable react/react-in-jsx-scope */
 import { Segment, Grid } from "semantic-ui-react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { eventSchema, createEvent } from "./Event";
 
-const EventComponent = () => (
+const EventComponent = ({ onSubmit }) => (
   <div>
     <h3>Create event</h3>
     <Formik
@@ -18,6 +19,7 @@ const EventComponent = () => (
       onSubmit={(values, { setSubmitting }) => {
         createEvent(values);
         setSubmitting(false);
+        onSubmit();
       }}
     >
       {({ isSubmitting }) => (
